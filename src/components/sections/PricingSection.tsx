@@ -116,7 +116,7 @@ export const PricingSection = () => {
           </div>
 
           {/* Premium Plan - Highlighted */}
-          <div className="bg-gradient-to-b from-warning/25 to-warning/5 rounded-2xl p-8 border-2 border-warning shadow-2xl relative">
+          <div className="bg-gradient-to-b from-warning/40 to-warning/10 rounded-2xl p-8 border-2 border-warning shadow-2xl relative">
             {/* Popular Badge */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <div className="bg-warning text-black px-6 py-2 rounded-full font-bold text-sm flex items-center space-x-1">
