@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    /* Kit Grafismo Colors */
+    --primary: 210 79% 58%; /* Azul claro #4A90E2 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 39 91% 55%; /* Amarelo #F5A623 */
+    --secondary-foreground: 0 0% 15%;
+
+    --accent: 95 76% 49%; /* Verde #7ED321 */
+    --accent-foreground: 0 0% 15%;
+
+    --success: 95 76% 49%; /* Verde para garantias e benefícios */
+    --success-foreground: 0 0% 15%;
+
+    --warning: 39 91% 55%; /* Amarelo para CTAs */
+    --warning-foreground: 0 0% 15%;
+
+    --muted: 210 17% 95%;
+    --muted-foreground: 0 0% 29%; /* Cinza escuro #4A4A4A */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 79% 58%;
+
+    --radius: 12px;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(var(--warning)) 0%, hsl(var(--warning) / 0.9) 100%);
+    --shadow-glow: 0 20px 60px -10px hsl(var(--primary) / 0.3);
+    --shadow-xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 79% 58%;
+    --primary-foreground: 0 0% 15%;
+
+    --secondary: 39 91% 55%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 0 0% 29%;
+
+    --accent: 95 76% 49%;
+    --accent-foreground: 0 0% 15%;
+
+    --success: 95 76% 49%;
+    --success-foreground: 0 0% 15%;
+
+    --warning: 39 91% 55%;
+    --warning-foreground: 0 0% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 79% 58%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+/* Typography */
+@layer components {
+  .font-heading {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+  }
+  
+  /* Hero Section Styles */
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
+  }
+  
+  .section-padding {
+    @apply px-3 sm:px-4 md:px-6 lg:px-8 xl:px-16;
+  }
+  
+  .container-width {
+    @apply max-w-7xl mx-auto w-full;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom shadows */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-3xl {
+    box-shadow: var(--shadow-xl);
+  }
+  
+  /* Text shadows for better readability */
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Mobile layout optimization */
+  @media (max-width: 640px) {
+    .gradient-hero {
+      min-height: 100vh;
+      min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    }
+    
+    /* Prevent text overflow */
+    .break-words {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    /* Ensure no horizontal overflow */
+    body {
+      overflow-x: hidden;
+    }
+  }
+}
