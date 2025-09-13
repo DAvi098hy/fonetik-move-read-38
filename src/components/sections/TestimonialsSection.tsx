@@ -1,6 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import mariaSilvaProfile from "@/assets/maria-silva-profile.png";
-import carlosMendesProfile from "@/assets/carlos-mendes-profile.png";
+import carlosMendesProfile from "@/assets/professor-testimonial.png";
 import patriciaOliveiraProfile from "@/assets/patricia-oliveira-profile-final.png";
 
 export const TestimonialsSection = () => {
