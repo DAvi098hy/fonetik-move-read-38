@@ -4,7 +4,7 @@ import heroImage from "@/assets/mother-child-learning.jpg";
 
 export const HeroSection = () => {
   const scrollToBuy = () => {
-    const element = document.getElementById('oferta');
+    const element = document.getElementById('precos');
     if (element) {
       const offset = 100; // Offset para mostrar melhor a tabela
       const elementPosition = element.offsetTop - offset;
