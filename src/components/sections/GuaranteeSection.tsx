@@ -1,5 +1,5 @@
 import { Shield, Clock, RefreshCw } from "lucide-react";
-import guaranteeBadge from "@/assets/guarantee-badge.jpg";
+import guaranteeBadge from "@/assets/selo-7-dias.jpg";
 
 export const GuaranteeSection = () => {
   return (
