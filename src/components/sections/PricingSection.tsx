@@ -9,7 +9,7 @@ export const PricingSection = () => {
     } else if (plan === 'premium') {
       window.open('https://pay.cakto.com.br/sc2wtay', '_blank');
     } else {
-      window.open('#comprar-platinum', '_blank');
+      window.open('https://pay.cakto.com.br/39ub62w', '_blank');
     }
   };
 
