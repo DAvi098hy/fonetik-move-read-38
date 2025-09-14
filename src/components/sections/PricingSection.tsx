@@ -7,7 +7,7 @@ export const PricingSection = () => {
     if (plan === 'basic') {
       window.open('https://pay.cakto.com.br/4skit7w_568196', '_blank');
     } else if (plan === 'premium') {
-      window.open('#comprar-premium', '_blank');
+      window.open('https://pay.cakto.com.br/sc2wtay', '_blank');
     } else {
       window.open('#comprar-platinum', '_blank');
     }
