@@ -5,7 +5,7 @@ export const PricingSection = () => {
   const scrollToBuy = (plan: string) => {
     // Replace with actual purchase links
     if (plan === 'basic') {
-      window.open('#comprar-basico', '_blank');
+      window.open('https://pay.cakto.com.br/4skit7w_568196', '_blank');
     } else if (plan === 'premium') {
       window.open('#comprar-premium', '_blank');
     } else {
