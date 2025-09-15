@@ -4,15 +4,20 @@ import heroImage from "@/assets/hero-background-new.png";
 
 export const HeroSection = () => {
   const scrollToBuy = () => {
-    const element = document.getElementById('precos');
-    if (element) {
-      const offset = 100; // Offset para mostrar melhor a tabela
-      const elementPosition = element.offsetTop - offset;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
-    }
+    // Modern approach with requestAnimationFrame to avoid forced reflow
+    requestAnimationFrame(() => {
+      const element = document.getElementById('precos');
+      if (element) {
+        const offset = 100;
+        const elementRect = element.getBoundingClientRect();
+        const elementPosition = elementRect.top + window.scrollY - offset;
+        
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
   };
 
   return (
@@ -37,6 +42,9 @@ export const HeroSection = () => {
                   className="w-full h-auto object-cover max-h-[200px] sm:max-h-[250px]"
                   fetchPriority="high"
                   loading="eager"
+                  width="320"
+                  height="250"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -71,6 +79,9 @@ export const HeroSection = () => {
                 className="w-full h-auto object-cover"
                 fetchPriority="high"
                 loading="eager"
+                width="600"
+                height="400"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>

@@ -51,6 +51,9 @@ export const ResultsSection = () => {
                      alt={result.title}
                      className="w-[68px] h-[68px] object-cover rounded-full"
                      loading="lazy"
+                     width="68"
+                     height="68"
+                     decoding="async"
                    />
                  ) : (
                    <div className="w-[68px] h-[68px] bg-white/30 rounded-full"></div>
@@ -73,6 +76,9 @@ export const ResultsSection = () => {
             alt="Crianças aprendendo com tablets e materiais educacionais - tecnologia e aprendizado"
             className="w-48 h-48 mx-auto rounded-xl shadow-lg object-cover"
             loading="lazy"
+            width="192"
+            height="192"
+            decoding="async"
           />
         </div>
 

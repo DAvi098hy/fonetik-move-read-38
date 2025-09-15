@@ -7,6 +7,10 @@
     <meta name="description" content="Kit de Grafismo Fonético - Ensine seu filho a ler até 5x mais rápido com método americano comprovado. Para crianças de 2 a 12 anos, incluindo TDAH e Autismo." />
     <meta name="keywords" content="grafismo fonético, leitura infantil, TDAH, autismo, método de leitura, educação infantil" />
     <meta name="author" content="Kit de Grafismo Fonético" />
+    
+    <!-- Cache optimization headers -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+    <meta http-equiv="Expires" content="Thu, 31 Dec 2025 23:59:59 GMT">
 
     <meta property="og:title" content="Kit de Grafismo Fonético - Seu Filho Lendo 5x Mais Rápido" />
     <meta property="og:description" content="Transforme a dificuldade de leitura em momentos de conexão e aprendizado. Método americano comprovado para crianças de 2 a 12 anos." />
@@ -20,16 +24,68 @@
     <!-- Remove favicon icon -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     
-    <script>
-      window.pixelId = "68965f2283fda3b7f77d6d3d";
-      var a = document.createElement("script");
-      a.setAttribute("async", "");
-      a.setAttribute("defer", "");
-      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-      document.head.appendChild(a);
-    </script>
+    <!-- Preload critical resources for faster LCP -->
+    <link rel="preload" as="image" href="/src/assets/hero-background-new.png" fetchpriority="high">
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.woff2" type="font/woff2" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
     
-    <!-- Google Fonts - Optimized loading -->
+    <!-- Critical CSS inlined for faster rendering -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      :root {
+        --primary: 210 79% 58%;
+        --warning: 39 91% 55%;
+        --background: 0 0% 100%;
+        --foreground: 0 0% 15%;
+        --border: 214.3 31.8% 91.4%;
+        --radius: 12px;
+      }
+      
+      * { box-sizing: border-box; }
+      
+      body { 
+        background-color: hsl(var(--background)); 
+        color: hsl(var(--foreground));
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #root { min-height: 100vh; }
+      
+      .gradient-hero {
+        background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(210 85% 45%) 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .section-padding { padding: 2rem 1rem; }
+      .container-width { max-width: 1200px; margin: 0 auto; width: 100%; }
+      
+      .font-heading, .font-body { font-family: Arial, Helvetica, sans-serif; }
+      .text-white { color: rgb(255, 255, 255); }
+      .text-warning { color: hsl(var(--warning)); }
+      .font-bold { font-weight: 700; }
+      .font-extrabold { font-weight: 800; }
+      .text-shadow-lg { text-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5); }
+      .break-words { word-wrap: break-word; overflow-wrap: break-word; }
+      .leading-tight { line-height: 1.25; }
+      
+      /* Prevent layout shifts */
+      img { max-width: 100%; height: auto; }
+      
+      /* Performance optimizations */
+      .will-change-scroll { will-change: scroll-position; }
+      .contain-layout { contain: layout; }
+    </style>
+    
+    <!-- Non-critical Google Fonts loaded asynchronously -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -38,6 +94,19 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Deferred pixel tracking for better performance -->
+    <script defer>
+      window.pixelId = "68965f2283fda3b7f77d6d3d";
+      setTimeout(() => {
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      }, 2000);
+    </script>
+    
+    <script type="module" defer src="/src/main.tsx"></script>
   </body>
 </html>
