@@ -1,7 +1,7 @@
 import { Star, Quote } from "lucide-react";
-import mariaSilvaProfile from "@/assets/maria-silva-profile.png";
-import carlosMendesProfile from "@/assets/professor-testimonial.png";
-import patriciaOliveiraProfile from "@/assets/patricia-oliveira-profile-final.png";
+import mariaSilvaProfile from "@/assets/maria-silva-optimized.webp";
+import carlosMendesProfile from "@/assets/professor-optimized.webp";
+import patriciaOliveiraProfile from "@/assets/patricia-oliveira-optimized.webp";
 
 export const TestimonialsSection = () => {
   const testimonials = [
@@ -77,6 +77,7 @@ export const TestimonialsSection = () => {
                       src={testimonial.profileImage} 
                       alt={testimonial.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="w-8 h-8 bg-gray-300 rounded-full"></div>

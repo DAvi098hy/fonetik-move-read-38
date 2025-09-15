@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-import heroImage from "@/assets/mother-child-learning.jpg";
+import heroImage from "@/assets/hero-optimized.webp";
 
 export const HeroSection = () => {
   const scrollToBuy = () => {
@@ -35,6 +35,8 @@ export const HeroSection = () => {
                   src={heroImage} 
                   alt="Mãe e filho fazendo atividades de grafismo fonético juntos - momento de conexão e aprendizado"
                   className="w-full h-auto object-cover max-h-[200px] sm:max-h-[250px]"
+                  fetchPriority="high"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -67,6 +69,8 @@ export const HeroSection = () => {
                 src={heroImage} 
                 alt="Mãe e filho fazendo atividades de grafismo fonético juntos - momento de conexão e aprendizado"
                 className="w-full h-auto object-cover"
+                fetchPriority="high"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>

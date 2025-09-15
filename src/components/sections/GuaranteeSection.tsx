@@ -1,5 +1,5 @@
 import { Shield, Clock, RefreshCw } from "lucide-react";
-import guaranteeBadge from "@/assets/selo-7-dias.jpg";
+import guaranteeBadge from "@/assets/guarantee-badge-optimized.webp";
 
 export const GuaranteeSection = () => {
   return (
@@ -12,6 +12,7 @@ export const GuaranteeSection = () => {
                 src={guaranteeBadge} 
                 alt="Garantia de 7 dias"
                 className="w-32 h-32 object-contain"
+                loading="lazy"
               />
             </div>
           </div>

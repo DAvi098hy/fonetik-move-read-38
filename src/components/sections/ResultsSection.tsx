@@ -1,8 +1,8 @@
-import childrenLearningTablets from "@/assets/children-learning-tablets.png";
-import syllableLearningIcon from "@/assets/syllable-learning-icon.png";
-import primeiraSemanaIcon from "@/assets/primeira-semana-icon.png";
-import primeiroMesIcon from "@/assets/primeiro-mes-icon.png";
-import resultadosContinuosIcon from "@/assets/resultados-continuos-new.png";
+import childrenLearningTablets from "@/assets/children-learning-optimized.webp";
+import syllableLearningIcon from "@/assets/syllable-learning-optimized.webp";
+import primeiraSemanaIcon from "@/assets/primeira-semana-optimized.webp";
+import primeiroMesIcon from "@/assets/primeiro-mes-optimized.webp";
+import resultadosContinuosIcon from "@/assets/resultados-continuos-optimized.webp";
 
 export const ResultsSection = () => {
   const results = [
@@ -45,15 +45,16 @@ export const ResultsSection = () => {
           {results.map((result, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
               <div className="bg-white/20 rounded-full w-[68px] h-[68px] flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                {result.image ? (
-                  <img 
-                    src={result.image} 
-                    alt={result.title}
-                    className="w-[68px] h-[68px] object-cover rounded-full"
-                  />
-                ) : (
-                  <div className="w-[68px] h-[68px] bg-white/30 rounded-full"></div>
-                )}
+                 {result.image ? (
+                   <img 
+                     src={result.image} 
+                     alt={result.title}
+                     className="w-[68px] h-[68px] object-cover rounded-full"
+                     loading="lazy"
+                   />
+                 ) : (
+                   <div className="w-[68px] h-[68px] bg-white/30 rounded-full"></div>
+                 )}
               </div>
               <h3 className="font-heading text-lg font-semibold text-white mb-3">
                 {result.title}
@@ -71,6 +72,7 @@ export const ResultsSection = () => {
             src={childrenLearningTablets} 
             alt="Crianças aprendendo com tablets e materiais educacionais - tecnologia e aprendizado"
             className="w-48 h-48 mx-auto rounded-xl shadow-lg object-cover"
+            loading="lazy"
           />
         </div>
 
