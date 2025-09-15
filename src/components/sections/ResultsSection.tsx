@@ -1,4 +1,4 @@
-import childrenLearningTablets from "@/assets/children-learning-optimized.webp";
+import childrenLearningTablets from "@/assets/children-learning-new.png";
 import syllableLearningIcon from "@/assets/syllable-learning-optimized.webp";
 import primeiraSemanaIcon from "@/assets/primeira-semana-optimized.webp";
 import primeiroMesIcon from "@/assets/primeiro-mes-optimized.webp";
