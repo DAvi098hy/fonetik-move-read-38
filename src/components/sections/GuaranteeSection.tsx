@@ -9,7 +9,7 @@ export const GuaranteeSection = () => {
           <div className="flex justify-center mb-8">
             <div className="relative">
               <img 
-                src={guaranteeBadge} 
+                src={guaranteeBadge + '?v=' + Date.now()} 
                 alt="Garantia de 7 dias"
                 className="w-32 h-32 object-contain"
                 loading="lazy"
