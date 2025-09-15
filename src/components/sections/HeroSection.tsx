@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-import heroImage from "@/assets/hero-optimized.webp";
+import heroImage from "@/assets/hero-background-new.png";
 
 export const HeroSection = () => {
   const scrollToBuy = () => {
