@@ -38,14 +38,7 @@ export default defineConfig(({ mode }) => ({
     // Target modern browsers for smaller bundles
     target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
     // Optimize minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log']
-      }
-    },
+    minify: 'esbuild', // Use esbuild instead of terser for faster builds
     // Enable source maps for debugging but keep them small
     sourcemap: false,
     // Set chunk size warning limit
